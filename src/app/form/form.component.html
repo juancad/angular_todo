@@ -1,0 +1,14 @@
+<mat-card>
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Contenido</mat-label>
+            <textarea matInput formControlName="contenido"></textarea>
+        </mat-form-field>
+        <br />
+        <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="addTask()">Añadir</button>
+    </form>
+</mat-card>

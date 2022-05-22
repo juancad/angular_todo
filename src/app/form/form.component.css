@@ -1,0 +1,9 @@
+.col-md-3 {
+    background: #2e2e2e;
+    height: 94vh;
+    padding: 15px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
