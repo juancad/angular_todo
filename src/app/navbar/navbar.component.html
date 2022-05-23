@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class="flexExpand">
-    <h1>To-do list</h1>
+    <h1><a [routerLink]="'/'" class="title">To-do list</a></h1>
     <div class="links">
-        <a mat-list-item [routerLink]="'/'"> Lista de tareas </a>&nbsp;
-        <a mat-list-item [routerLink]="'/addautor'"> Añadir autor </a>
+        <a mat-list-item [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Lista de tareas </a>&nbsp;
+        <a mat-list-item [routerLink]="'/addautor'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Añadir autor </a>
     </div>
 </mat-toolbar>
