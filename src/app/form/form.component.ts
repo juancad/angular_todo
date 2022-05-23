@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Task } from '../model/task';
 import { TasksService } from '../tasks.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { TasksService } from '../tasks.service';
 })
 export class FormComponent implements OnInit {
   form!: FormGroup;
+  autors = this.tasksService.getAutors();
+
   constructor(private tasksService: TasksService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      nombre: ['', Validators.required],
+      nombre: ['', [Validators.required, Validators.maxLength(50)]],
       contenido: [''],
+      autor: ['', Validators.required],
     })
   }
 
@@ -22,6 +26,7 @@ export class FormComponent implements OnInit {
     this.tasksService.addTask({
       nombre: this.form.value.nombre,
       contenido: this.form.value.contenido,
+      autor: this.form.value.autor,
     })
   }
 }

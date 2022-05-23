@@ -19,6 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { EditComponent } from './edit/edit.component';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AutorComponent } from './autor/autor.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     TodoComponent,
     EditComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    AutorComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     ReactiveFormsModule,
     DragDropModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

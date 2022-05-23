@@ -6,11 +6,12 @@ import { Task } from './model/task';
   providedIn: 'root'
 })
 export class TasksService {
+  autores: string[] = ["Juan Carlos"];
   tasks: Task[] = [{
-    nombre: "Nombre de la primera tarea", contenido: "Contenido de la primera tarea.",
+    nombre: "Nombre de la primera tarea", contenido: "Contenido de la primera tarea.", autor: this.autores[0]
   }];
   inProgress: Task[] = [{
-    nombre: "Nombre de la asdf tarea", contenido: "Contenido de la primera tarea.",
+    nombre: "Ejemplo de tarea en progreso", contenido: "Contenido de la tarea.", autor: this.autores[0]
   }];
   done: Task[] = [];
 
@@ -36,12 +37,27 @@ export class TasksService {
     return this.tasks;
   }
 
+  getAutors() {
+    return this.autores;
+  }
+
   getInProgress() {
     return this.inProgress;
   }
 
   getDone() {
     return this.done;
+  }
+
+  getAutor(autor: string): boolean {
+    for (let i in this.autores) {
+      if (this.autores[i] == autor) return true;
+    }
+    return false;
+  }
+
+  addAutor(autor: string) {
+    this.autores.push(autor);
   }
 
   get(i: number, j: number): Task {

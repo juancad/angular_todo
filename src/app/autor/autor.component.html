@@ -1,0 +1,11 @@
+<mat-card>
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre del autor</mat-label>
+            <input matInput formControlName="autor">
+        </mat-form-field>
+        <br />
+        <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="addAutor()">Añadir</button><br/><br/>
+        {{mensaje}}
+    </form>
+</mat-card>

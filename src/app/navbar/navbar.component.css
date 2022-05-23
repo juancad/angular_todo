@@ -1,0 +1,19 @@
+.flexExpand {
+  flex: 1 1 auto;
+}
+
+.links {
+  margin: auto;
+  font-size: 15px;
+}
+.links a {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}

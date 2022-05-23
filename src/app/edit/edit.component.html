@@ -8,8 +8,16 @@
             <mat-label>Contenido</mat-label>
             <textarea matInput formControlName="contenido"></textarea>
         </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Autor</mat-label>
+            <mat-select formControlName="autor" placeholder="Autor:">
+                <ng-container *ngFor="let autor of autors">
+                    <mat-option value="{{autor}}">{{autor}}</mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
         <br />
-        <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="cancel()" color="warn">Cancelar</button>&nbsp;
+        <button mat-raised-button color="primary" (click)="cancel()" color="warn">Cancelar</button>&nbsp;
         <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="edit()">Editar</button>
     </form>
 </mat-card>

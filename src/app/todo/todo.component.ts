@@ -11,24 +11,24 @@ import { Router } from '@angular/router';
 })
 export class TodoComponent implements OnInit {
   tasks = this.tasksService.getTasks();
-  inProgress = this.tasksService.getInProgress();;
-  done = this.tasksService.getDone();;
+  inProgress = this.tasksService.getInProgress();
+  done = this.tasksService.getDone();
 
-  constructor(private tasksService: TasksService, private route:Router) { }
+  constructor(private tasksService: TasksService, private route: Router) { }
 
   ngOnInit(): void {
-  }
-
-  onEdit(item: Task, i: number) {
-
   }
 
   deleteTask(i: number, j: number) {
     this.tasksService.deleteTask(i, j);
   }
 
-  go(i: number, j: number) {
-    this.route.navigate(['/edit'], { queryParams: { i: i, j: j} });
+  goEdit(i: number, j: number) {
+    this.route.navigate(['/edit'], { queryParams: { i: i, j: j } });
+  }
+
+  goInfo(i: number, j: number) {
+    this.route.navigate(['/info'], { queryParams: { i: i, j: j } });
   }
 
   drop(event: CdkDragDrop<Task[]>) {
