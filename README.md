@@ -20,4 +20,4 @@ Para poder ejecutar el proyecto será necesario:
 - Importar el proyecto e instalar las dependencias del fichero package.json mediante el comando `npm install`.
 - Ejecutar el comando `ng serve` y abrir la dirección `http://localhost:4200/` en un navegador.
 
-## 3. Requisitos<a name="descripcion"/>
+## 3. Descripción del trabajo realizado<a name="descripcion"/>
