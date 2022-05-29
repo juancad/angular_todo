@@ -7,7 +7,7 @@
 3. [Descripción del trabajo realizado](#descripcion)
 
 ### 1. Introducción <a name="intro"/>
-Se trata de realizar una aplicación en angular para una todo list utilizando enrutamiento y navegación.
+Se trata de realizar una aplicación en angular para una to-do list utilizando enrutamiento y navegación.
 
 ### 1.1 Link web <a name="link-web"/>
 https://juancad.github.io/angular_todo/
